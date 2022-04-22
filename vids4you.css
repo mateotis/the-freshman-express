@@ -1,0 +1,73 @@
+body {
+	margin: 0;
+}
+
+.header {
+	background-color: white;
+	color: black;
+}
+
+.header-text {
+	display: inline-block;
+	font-size: 1.5em;
+	margin: 0;
+	padding: 0 10px 5px 10px;
+}
+
+#site-title {
+	font-size: 2.5em;
+	color: red;
+}
+
+.video {
+	background-color: black;
+	text-align: center;
+}
+
+#video-file {
+	width: 60%;
+}
+
+.content {
+	margin: 2em 2em 2em 8em;
+}
+
+.flexed-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-style: normal;
+	margin-bottom: 1.5em;
+}
+
+.flexed-row > p {
+	margin: 0;
+}
+
+.metrics {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	margin-bottom: 1.5em;
+}
+
+.metrics > div {
+	margin-right: 10px;
+}
+
+.metadata {
+	margin-left: auto;
+}
+
+.title {
+	font-size: 2em;
+}
+
+.author-info {
+	display: inline-block;
+}
+
+#avatar {
+	width: 50px;
+	height: 50px;
+}
