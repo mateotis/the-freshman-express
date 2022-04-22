@@ -1,6 +1,7 @@
 let views = 1000;
 let likes = 150;
 let shares = 11;
+let metadataOpen = false;
 
 function randomIncrement() {
 	$( "#views" ).html(function() {
@@ -20,4 +21,18 @@ function randomIncrement() {
 
 $(document).ready(function() {
 	randomIncrement();
+});
+
+$(document).ready(function() {
+	$(".metadata").click(function() {
+		if(metadataOpen == false) {
+			$(".metadata-details").show();
+			metadataOpen = true;
+		}
+		else {
+			$(".metadata-details").hide();
+			metadataOpen = false;
+		}
+
+	});
 });

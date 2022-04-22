@@ -2,6 +2,10 @@ body {
 	margin: 0;
 }
 
+.site {
+	position: relative;
+}
+
 .header {
 	background-color: white;
 	color: black;
@@ -16,7 +20,14 @@ body {
 
 #site-title {
 	font-size: 2.5em;
-	color: red;
+	background-color: black;
+	color: white;
+	transition: background-color 2s, color 2s;
+}
+
+#site-title:hover {
+	background-color: white;
+	color: black;
 }
 
 .video {
@@ -57,14 +68,31 @@ body {
 
 .metadata {
 	margin-left: auto;
+	border-style: solid;
+}
+
+.metadata-details {
+	display: none;
+	position: absolute;
+	background-color: white;
+	top: 30%;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	border-style: solid;
+	width: 25%;
 }
 
 .title {
 	font-size: 2em;
 }
 
-.author-info {
-	display: inline-block;
+.author {
+	display: flex;
+}
+
+.author > p {
+	margin-left: 10px;
 }
 
 #avatar {
