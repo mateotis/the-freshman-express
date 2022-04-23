@@ -19,6 +19,18 @@ body {
 	padding: 0 10px 5px 10px;
 }
 
+a:link { /* I don't want anything else but the change of cursor */
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
 #site-title {
 	font-size: 2.5em;
 	background-color: black;
@@ -65,6 +77,24 @@ body {
 
 .metrics > div {
 	margin-right: 10px;
+}
+
+#views {
+	margin-right: 5em;
+}
+
+#like-button {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	content: url("like.png");
+}
+
+#share-button {
+	width: 20px;
+	height: 20px;
+	margin-right: 5px;
+	content: url("share.jpg");
 }
 
 .metadata {

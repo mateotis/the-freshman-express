@@ -1,7 +1,11 @@
 let views = parseInt($("#view-count").html()); // Parse the counts from the DOM as integers
 let likes = parseInt($("#like-count").html());
 let shares = parseInt($("#share-count").html());
+
 let metadataOpen = false;
+let likePressed = false;
+let sharePressed = false;
+
 let episode = $(".title").html();
 
 let viewMult = 0; // Using changing global variables rather than function parametres because recursion with a parameter function is very weird in JS
@@ -76,5 +80,37 @@ $(document).ready(function() {
 			metadataOpen = false;
 		}
 
+	});
+});
+
+$(document).ready(function() {
+	$("#like-button").click(function() { // Change icon and like counter upon liking/unliking video
+		console.log("Clicked like");
+		if(likePressed == false) {
+			$("#like-button").css("content", 'url("like-pressed.png")');
+			likes = likes + 1;
+			$( "#likes" ).html(likes + " likes");
+
+			likePressed = true;
+		}
+		else {
+			$("#like-button").css("content", 'url("like.png")');
+			likes = likes - 1;
+			$( "#likes" ).html(likes + " likes");
+
+			likePressed = false;
+		}
+
+	});
+});
+
+$(document).ready(function() {
+	$("#share-button").click(function() {
+		if(sharePressed == false) {
+			shares = shares + 1;
+			$( "#shares" ).html(shares + " shares");
+
+			sharePressed = true; // Can't unshare once you shared!
+		}
 	});
 });
