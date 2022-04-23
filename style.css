@@ -79,7 +79,7 @@ a:visited {
 	text-align: center;
 	color: white;
 	background-color: #330662;
-	padding: 15px 10px 10px 10px;
+	padding: 20px 10px 10px 10px;
 	border-radius: 25px;
 	filter: drop-shadow(5px 5px 10px black);
 }
@@ -88,6 +88,24 @@ a:visited {
 	height: 200px;
 	width: 200px;
 	border-radius: 50%;
+}
+
+#search {
+	width: 80%;
+	height: 2em;
+	margin-top: 4em;
+	margin-bottom: 4em;
+}
+
+#archive {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
+#archive li {
+	margin-bottom: 1em;
 }
 
 .footer {
