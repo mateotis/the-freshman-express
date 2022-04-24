@@ -1,3 +1,5 @@
+// Since all four episode sites use this JS file, I had to make all functionality completely portable
+
 let views = parseInt($("#view-count").html()); // Parse the counts from the DOM as integers
 let likes = parseInt($("#like-count").html());
 let shares = parseInt($("#share-count").html());
@@ -14,9 +16,8 @@ let shareMult = 0;
 let freqMult = 0;
 
 function randomIncrement() { // Increment the view/like/share count dynamically with a touch of randomness to simulate the different popularities of each episode
-	console.log("Setting random timeout");
 	$( "#views" ).html(function() {
-		views = views + Math.floor(Math.random() * viewMult);
+		views = views + Math.floor(Math.random() * viewMult); // Math.random() returns a value between 0 and 1 - the lower the multiplier is, the higher the chance of it being rounded to 0, meaning no change in the count
 		return views + " views";
 	});
 	$( "#likes" ).html(function() {
@@ -27,14 +28,13 @@ function randomIncrement() { // Increment the view/like/share count dynamically 
 		shares = shares + Math.floor(Math.random() * shareMult);
 		return shares + " shares";
 	});
-	setTimeout(randomIncrement, Math.random() * 1000 * freqMult);
+	setTimeout(randomIncrement, Math.random() * 1000 * freqMult); // Recursive function: calls itself again after a random timeout moderated by the frequency multiplier
 }
 
 $(document).ready(function() { // Check which episode we just opened and set parametres accordingly
 	console.log("Checking episode number");
-	if(episode.search("Episode 1") != -1) {
+	if(episode.search("Episode 1") != -1) { // String.search() returns -1 if the substring wasn't found - so if it's NOT -1, that means we found it
 		console.log("Episode 1");
-		//randomIncrement(5, 2, 1, 10);
 		viewMult = 5;
 		likeMult = 2;
 		shareMult = 1;
@@ -43,10 +43,10 @@ $(document).ready(function() { // Check which episode we just opened and set par
 	}
 	else if(episode.search("Episode 2") != -1) {
 		console.log("Episode 2");
-		viewMult = 10;
+		viewMult = 10; // The later episodes have higher metrics to simulate their increasing popularity
 		likeMult = 4;
 		shareMult = 3;
-		freqMult = 7;
+		freqMult = 7; // Unlike the other three counts, a lower value here means smaller timeout values, aka faster recursion (and update)
 		randomIncrement();
 	}
 	else if(episode.search("Episode 3") != -1) {
@@ -59,8 +59,7 @@ $(document).ready(function() { // Check which episode we just opened and set par
 	}
 	else if(episode.search("Episode 4") != -1) {
 		console.log("Episode 4");
-		randomIncrement(50, 10, 7, 3);
-		viewMult = 50;
+		viewMult = 50; // The newest video is the most hyped
 		likeMult = 10;
 		shareMult = 7;
 		freqMult = 3;
@@ -70,22 +69,7 @@ $(document).ready(function() { // Check which episode we just opened and set par
 });
 
 $(document).ready(function() {
-	$(".metadata").click(function() {
-		if(metadataOpen == false) {
-			$(".metadata-details").show();
-			metadataOpen = true;
-		}
-		else {
-			$(".metadata-details").hide();
-			metadataOpen = false;
-		}
-
-	});
-});
-
-$(document).ready(function() {
 	$("#like-button").click(function() { // Change icon and like counter upon liking/unliking video
-		console.log("Clicked like");
 		if(likePressed == false) {
 			$("#like-button").css("content", 'url("like-pressed.png")');
 			likes = likes + 1;
@@ -104,7 +88,7 @@ $(document).ready(function() {
 	});
 });
 
-$(document).ready(function() {
+$(document).ready(function() { // Ditto for the share button
 	$("#share-button").click(function() {
 		if(sharePressed == false) {
 			shares = shares + 1;
