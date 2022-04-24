@@ -2,16 +2,16 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
-img {
-	border-radius: 10px;
-	width: 90%;
-	margin: 1em;
-}
-
 .header-image{
 	max-width: 99%;
   max-height: 99%;
 	background-color: #330662;
+}
+
+img {
+	border-radius: 10px;
+	width: 90%;
+	margin: 1em;
 }
 
 .blog { /* The entire blog is structured with CSS Grid */
