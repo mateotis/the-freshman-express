@@ -119,6 +119,31 @@ a:visited {
 	border-radius: 50%;
 }
 
+#author-name {
+	margin-right: 2em;
+}
+
+.subscribe-prompt {
+	display: none;
+	position: absolute;
+	background-color: white;
+	top: 30%; /* Combined with absolute position, makes it appear in the middle of the video */
+	left: 0; /* And in the middle horizontally */
+	right: 0;
+	margin: 0 auto;
+	padding: 0.5em;
+	border-style: solid;
+	border-radius: 25px;
+	width: 25%;
+}
+
+#subscribe-button {
+	font-weight: bold;
+	border-style: solid;
+	border-radius: 5px;
+	padding: 0.3em;
+}
+
 #episode-number {
 	display: none;
 }

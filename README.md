@@ -6,7 +6,7 @@ This is a video blog detailing a freshman's experiences at NYU Abu Dhabi. It sho
 ### Overall Concept and Theme
 We wanted to give a very homely blog-like feel to the website, something that could be seen as the creation of a freshman. The videos are hosted on a separate type of website that aims to be our version of YouTube or other popular video sharing/streaming sites. 
 ### Desired Experience
-We wanted a design interactivity which was basic and familiar to the audience, so we went with a website design similar to that of blogs hosted by Blogger or WordPress. The video site forms the bulk of the interactivity, with the ability to not just play the video but also to give a like or share.
+We wanted a design interactivity which was basic and familiar to the audience, so we went with a website design similar to that of blogs hosted by Blogger or WordPress. The video site forms the bulk of the interactivity, with the ability to not just play the video but also to give a like or share, or even subscribe.
 
 ## Process: 
 ### Brainstorming
@@ -25,7 +25,7 @@ All of the videos were then edited using Adobe Premiere Pro. Videos 3 and 4 were
 
 Concurrently we worked on the website's design. As we mentioned earlier, we went with a very Blogger-like style for the main website. Our color theme was inspired by the NYU purple (#VioletPride). We also made a clear distinction between the left side of the page containing blog posts that linked to the videos, and the right side which had the About and the menu that showed the months of each post.
 
-For the video website, although the four videos are hosted on four different sites, they all have the same CSS and Javascript to control their appearance and behavior. For these websites, we went with a style similar to that of YouTube, yet pretty different. We decided to call this site vids4you. Each video has a like and share button which are both interactive. The views, likes, and shares are all linked to counters that increment regularly based on a seed that is different for each video.
+For the video website, although the four videos are hosted on four different sites, they all have the same CSS and Javascript to control their appearance and behavior. For these websites, we went with a style similar to that of YouTube/Vimeo, yet pretty different. We decided to call this site vids4you. Each video has a like, share, and subscribe button which are all interactive. If the viewer pauses more than halfway through the video (detected dynamically), they will be prompted to subscribe. The views, likes, and shares are all linked to counters that increment regularly based on a seed that is different for each video.
 
 ## Reflection/Evaluation: 
 We feel that our expectations have been met in this project. We have good videos, and a great website hosting them. We all worked very well as a team on this project, with each of us contributing our strengths. Some of the more challenging parts we faced were regarding the lighting for the videos, recording the sound, and suitably compressing the final mp4 videos for hosting on our website.

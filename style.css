@@ -2,11 +2,6 @@ body {
 	font-family: 'Lato', sans-serif;
 }
 
-.header-image{
-	max-width: 99%;
-  	max-height: 99%;
-}
-
 img {
 	border-radius: 10px;
 	width: 90%;
@@ -38,11 +33,9 @@ a:visited {
 
 .header {
 	text-align: center;
-	background-color: #700bb2;
+	background-color: #7c00ba;
 	grid-area: header;
-/* 	font-size: 3em; */
-/* 	border-bottom-style: solid; */
-	border-color: #57068c;
+	object-fit: contain;
 }
 
 .feed {

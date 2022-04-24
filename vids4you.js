@@ -7,6 +7,8 @@ let shares = parseInt($("#share-count").html());
 let metadataOpen = false;
 let likePressed = false;
 let sharePressed = false;
+let subscribePressed = false;
+let promptOpened = false;
 
 let episode = $("#episode-number").html();
 
@@ -69,6 +71,27 @@ $(document).ready(function() { // Check which episode we just opened and set par
 });
 
 $(document).ready(function() {
+	$("#video-file").on("play", function(e) {
+		if(e.target.currentTime >= e.target.duration / 2) {
+			if(promptOpened == true) {
+				$(".subscribe-prompt").fadeOut(); // Hide the prompt when pressing play again
+			}
+		}
+	});
+});
+
+$(document).ready(function() {
+	$("#video-file").on("pause", function(e) {
+		if(e.target.currentTime >= e.target.duration / 2) { // Ask for subscription if the viewer pauses more than halfway through
+			if(promptOpened == false) {
+				$(".subscribe-prompt").fadeIn();
+				promptOpened = true; // Only show prompt once
+			}
+		}
+	});
+});
+
+$(document).ready(function() {
 	$("#like-button").click(function() { // Change icon and like counter upon liking/unliking video
 		if(likePressed == false) {
 			$("#like-button").css("content", 'url("like-pressed.png")');
@@ -95,6 +118,23 @@ $(document).ready(function() { // Ditto for the share button
 			$( "#shares" ).html(shares + " shares");
 
 			sharePressed = true; // Can't unshare once you shared!
+		}
+	});
+});
+
+$(document).ready(function() { // And for the subscribe button
+	$("#subscribe-button").click(function() {
+		if(subscribePressed == false) {
+			$("#subscribe-button").css("background-color", "black");
+			$("#subscribe-button").css("color", "white");
+
+			subscribePressed = true;
+		}
+		else {
+			$("#subscribe-button").css("background-color", "white");
+			$("#subscribe-button").css("color", "black");
+
+			subscribePressed = false;
 		}
 	});
 });
