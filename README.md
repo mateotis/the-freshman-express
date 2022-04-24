@@ -1,5 +1,5 @@
 # The Freshman Express
-## Group Members: Amiteash, Máté, Meera, and Shanaia
+### Group Members: Amiteash, Máté, Meera, and Shanaia
 
 ## Project Description
 This is a video blog detailing a freshman's experiences at NYU Abu Dhabi. It shows his journey not just as a student but as a vlogger as well, as he upskills in speaking, directing, filming, and editing.
