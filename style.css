@@ -4,8 +4,7 @@ body {
 
 .header-image{
 	max-width: 99%;
-  max-height: 99%;
-	background-color: #330662;
+  	max-height: 99%;
 }
 
 img {
@@ -41,8 +40,8 @@ a:visited {
 	text-align: center;
 	background-color: #330662;
 	grid-area: header;
-	font-size: 3em;
-	border-bottom-style: solid;
+/* 	font-size: 3em; */
+/* 	border-bottom-style: solid; */
 	border-color: #57068c;
 }
 
