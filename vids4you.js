@@ -8,7 +8,7 @@ let metadataOpen = false;
 let likePressed = false;
 let sharePressed = false;
 
-let episode = $(".title").html();
+let episode = $("#episode-number").html();
 
 let viewMult = 0; // Using changing global variables rather than function parametres because recursion with a parameter function is very weird in JS
 let likeMult = 0;
