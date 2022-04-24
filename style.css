@@ -8,6 +8,12 @@ img {
 	margin: 1em;
 }
 
+.header-image{
+	max-width: 99%;
+  max-height: 99%;
+	background-color: #330662;
+}
+
 .blog { /* The entire blog is structured with CSS Grid */
   display: grid;
   grid-template-areas:
